@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Admin</title>
+  </head>
+  <body>
+    <h1>Add to list of available cars:</h1>
+
+    <form action="/cars" method="post">
+      <label for="makeModel">What is the Make and Model</label>
+      <input id="makeModel" name="makeModel" type="text">
+      <label for="price">What is the price?</label>
+      <input id="price" name="price" type="text">
+      <label for="miles">How many miles are on the vehicle?</label>
+      <input id="miles" name="miles" type="text">
+      <label for="message">What is the vehicle's description?</label>
+      <input id="message" name="message" type="text">
+      <button type="submit">Submit</button>
+    </form>
+
+  </body>
+</html>
