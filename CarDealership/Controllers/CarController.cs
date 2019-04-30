@@ -8,20 +8,20 @@ namespace CarDealership.Controllers
   {
 
     [HttpGet("/cars")]
-    public ActionResult PageOfCars()
+    public ActionResult Index()
     {
       List<Car> allCars = Car.GetAll();
       return View(allCars);
     }
 
-    [HttpGet("/admin")]
-    public ActionResult Admin()
+    [HttpGet("/cars/new")]
+    public ActionResult New()
     {
       return View();
     }
 
     [HttpPost("/cars")]
-    public ActionResult MakeCar(string makeModel, int price, int miles, string message)
+    public ActionResult Create(string makeModel, int price, int miles, string message)
     {
       Car newCar = new Car(makeModel, price, miles, message);
       return RedirectToAction("PageOfCars");
